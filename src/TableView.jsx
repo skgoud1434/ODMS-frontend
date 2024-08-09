@@ -31,12 +31,17 @@ export default function EmployeeTable() {
   // Function to delete an employee
   async function deleteEmployee(id) {
     try {
-      console.log("Function called for ID: " + id);
-      await axios.delete(`http://localhost:8080/xto10x/employees?id=${id}`);
-      enqueueSnackbar("Successfully deleted details of ID: " + id, {
-        variant: "success",
+     axios.delete(`http://localhost:8080/xto10x/employees/${id}`)
+      .then(response => {
+        enqueueSnackbar("Successfully deleted details of ID: " + id, {
+          variant: "success",
+        });
+          console.log('Employee deleted successfully');
+      })
+      .catch(error => {
+          console.error('Error deleting employee:', error);
       });
-      getDetails();
+        getDetails();
     } catch (error) {
       enqueueSnackbar("Something went wrong while deleting", {
         variant: "warning",

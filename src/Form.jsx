@@ -40,7 +40,7 @@ export default function Register() {
   const register = async () => {
     if (validObject(data)) {
       try {
-        const res = await axios.post("http://localhost:8080/xto10x/employees", {
+         await axios.post("http://localhost:8080/xto10x/employees", {
           id: data.id,
           employeeName: data.employeeName,
           employeeEmail: data.employeeEmail,

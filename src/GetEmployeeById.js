@@ -1,9 +1,8 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import { useNavigate } from "react-router-dom";
-import "./form.css";
+
 export default function GetEmployeeById() {
   const { enqueueSnackbar } = useSnackbar();
   const navigator = useNavigate();
@@ -18,8 +17,9 @@ export default function GetEmployeeById() {
         const res = await axios.get(
           `http://localhost:8080/xto10x/employees/${num}`
         );
+        console.log(res);
 
-        if (res.data) {
+        if (res.data.employeeEmail != null) {
           enqueueSnackbar("Details found", { variant: "success" });
           setEmployeeData(res.data); // Store the data in state
         } else {
