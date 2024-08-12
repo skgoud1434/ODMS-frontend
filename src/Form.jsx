@@ -40,7 +40,7 @@ export default function Register() {
   const register = async () => {
     if (validObject(data)) {
       try {
-         await axios.post("http://localhost:8080/xto10x/employees", {
+         await axios.post("https://docker-backend-0t2v.onrender.com/employees", {
           id: data.id,
           employeeName: data.employeeName,
           employeeEmail: data.employeeEmail,
@@ -60,7 +60,7 @@ export default function Register() {
     if (validObject(data)) {
       try {
         const res = await axios.put(
-          `http://localhost:8080/xto10x/employees/${data.id}`,
+          `https://docker-backend-0t2v.onrender.com/employees/${data.id}`,
           data
         );
         enqueueSnackbar("Successfully updated details", { variant: "success" });

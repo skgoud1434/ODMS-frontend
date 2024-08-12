@@ -17,8 +17,7 @@ root.render(<div>
           <Route path="/" element={<App />} />
           <Route path="/form" element={<App />} />
           <Route path="/getEmployeeById" element={<GetEmployeeById />} />
-    
-          <Route path="/getManagers" element={<GetManager />} />
+         <Route path="/getManagers" element={<GetManager />} />
           <Route path="/getEmployers" element={<GetEmployers />} />
           <Route path="/simpleTree" element={<SimpleTree />} />
           <Route path="/TableView" element={<TableView />} />

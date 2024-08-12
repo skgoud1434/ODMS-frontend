@@ -16,7 +16,7 @@ export default function GetManager() {
     const fetchManager = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/xto10x/employees/by-employee/${employee}`
+          `https://docker-backend-0t2v.onrender.com/employees/by-employee/${employee}`
         );
         let ans = res.data;
         setManager(ans.managerEmail);

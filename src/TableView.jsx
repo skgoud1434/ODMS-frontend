@@ -13,7 +13,7 @@ export default function EmployeeTable() {
   // Function to fetch all employee details
   async function getDetails() {
     try {
-      const res = await axios.get("http://localhost:8080/xto10x/employees");
+      const res = await axios.get("https://docker-backend-0t2v.onrender.com/employees");
       setData(res.data);
       console.log(res.data);
     } catch (error) {

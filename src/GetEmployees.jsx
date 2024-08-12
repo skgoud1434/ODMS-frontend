@@ -11,7 +11,7 @@ export default function EmployeeList() {
   async function getEmployeeByManagerName(manager) {
     try {
       const res = await axios.get(
-        `http://localhost:8080/xto10x/employees/by-manager/${manager}`
+        `https://docker-backend-0t2v.onrender.com/employees/${manager}`
       );
       setEmployees(res.data); // Update with the response data
     } catch (error) {

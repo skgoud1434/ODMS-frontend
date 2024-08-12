@@ -15,7 +15,7 @@ export default function GetEmployeeById() {
     if (num) {
       try {
         const res = await axios.get(
-          `http://localhost:8080/xto10x/employees/${num}`
+          `https://docker-backend-0t2v.onrender.com/employees/${num}`
         );
         console.log(res);
 

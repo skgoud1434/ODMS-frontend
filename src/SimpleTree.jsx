@@ -89,8 +89,7 @@ const BorderedTreeView = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8080/xto10x/employees"
+        const response = await axios.get("https://docker-backend-0t2v.onrender.com/employees"
         );
         setData(response.data);
         const topManagers = response.data
