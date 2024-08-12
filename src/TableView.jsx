@@ -67,7 +67,7 @@ export default function EmployeeTable() {
                 <th>Employee Email</th>
                 <th>Manager Name</th>
                 <th>Manager Email</th>
-                <th>Action</th>
+                {/* <th>Action</th> */}
               </tr>
             </thead>
             <tbody>
@@ -78,7 +78,7 @@ export default function EmployeeTable() {
                   <td>{ele.employeeEmail}</td>
                   <td>{ele.managerName}</td>
                   <td>{ele.managerEmail}</td>
-                  <td>
+                  {/* <td>
                     <button
                       onClick={() => {
                         deleteEmployee(ele.id);
@@ -86,7 +86,7 @@ export default function EmployeeTable() {
                     >
                       Delete
                     </button>
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>

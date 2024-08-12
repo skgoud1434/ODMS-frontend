@@ -53,7 +53,7 @@ export default function GetEmployeeById() {
         {employeeData && (
           <div className="employee-details">
             <h4>Employee Details</h4>
-            <p>ID: {employeeData.id}</p>
+            {/* <p>ID: {num}</p> */}
             <p>Name: {employeeData.employeeName}</p>
             <p>Email: {employeeData.employeeEmail}</p>
             <p>Manager Name: {employeeData.managerName}</p>
