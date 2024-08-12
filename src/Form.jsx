@@ -93,13 +93,13 @@ export default function Register() {
     <div className="container">
       <h3>Enter the details to get registered/update details</h3>
       <form onSubmit={handleSubmit}>
-        <input
+        {/* <input
           type="text"
           value={data.id}
           name="id"
           placeholder="Enter employee id"
           onChange={handleChange}
-        />
+        /> */}
         <input
           type="text"
           value={data.employeeName.toLowerCase()}

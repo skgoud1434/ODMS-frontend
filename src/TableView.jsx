@@ -73,7 +73,7 @@ export default function EmployeeTable() {
             <tbody>
               {data.map((ele,ind) => (
                 <tr key={ele.id}>
-                  <td>{ind +1 }</td>
+                  <td>{ind +  1}</td>
                   <td>{ele.employeeName}</td>
                   <td>{ele.employeeEmail}</td>
                   <td>{ele.managerName}</td>
