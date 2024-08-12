@@ -31,7 +31,7 @@ export default function EmployeeTable() {
   // Function to delete an employee
   async function deleteEmployee(id) {
     try {
-     axios.delete(`http://localhost:8080/xto10x/employees/${id}`)
+     axios.delete(`https://docker-backend-0t2v.onrender.com/employees/${id}`)
       .then(response => {
         enqueueSnackbar("Successfully deleted details of ID: " + id, {
           variant: "success",
@@ -73,7 +73,7 @@ export default function EmployeeTable() {
             <tbody>
               {data.map((ele,ind) => (
                 <tr key={ele.id}>
-                  <td>{ind}</td>
+                  <td>{ind +1 }</td>
                   <td>{ele.employeeName}</td>
                   <td>{ele.employeeEmail}</td>
                   <td>{ele.managerName}</td>
